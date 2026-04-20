@@ -185,12 +185,12 @@
     <button class="clear-btn" id="clearBtn" onclick="clearChecked()" style="display:none">완료 항목 삭제</button>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script>
     const SUPABASE_URL = 'https://xlvlrnwxhwzzzcundtax.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhsdmxybnd4aHd6enpjdW5kdGF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY2NjM0MDMsImV4cCI6MjA5MjIzOTQwM30.7sgfKXCPf0IWiqF5DPaN61cfLAYJLIyp6l5cBFLNPq0';
 
-    const { createClient } = supabase;
+    const { createClient } = window.supabase;
     const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 
     let items = [];
